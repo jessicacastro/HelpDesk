@@ -44,6 +44,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
 		return new JwtAuthenticationTokenFilter();
 	}
 	
+	/*
+	 * Todas as requisições serão validadas e dependerão de um token válido para acessar o sistema.
+	 */
 	@Override
 	protected void configure(HttpSecurity httpSecurity) throws Exception {
 		httpSecurity.csrf().disable()
